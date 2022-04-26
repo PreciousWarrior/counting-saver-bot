@@ -45,7 +45,7 @@ client.on("messageReactionAdd", async (reaction, user)=>{
     const asciiChars = characterRange(":", "^");
     for (const character of content){
         // Message is officially unzuspicious
-        if (asciiChars.indexOf(character)>=0) return
+        if (asciiChars.indexOf(character.toUpperCase())>=0) return
     }
 
     // We aren't doing anything else, for now, because I feel like everything else can be somewhat tricked/bypassed. and overcomplicates stuff. we can deal with a few false positives
